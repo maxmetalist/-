@@ -1,11 +1,5 @@
-from src.generators import (
-    card_number_generator,
-    filter_by_currency,
-    transaction_descriptions,
-    transactions,
-    transactions_empty,
-    transactions_no_description,
-)
+from src.generators import (card_number_generator, filter_by_currency, transaction_descriptions, transactions,
+                            transactions_empty, transactions_no_description)
 
 
 def test_filter_by_currency_usd():
@@ -69,13 +63,12 @@ def test_filter_by_currency_rub():
         assert next(generator) == "Нет транзакций в данной валюте"
 
 
-def test_filter_by_currency():
-    """тест на пустой список"""
+def test_filter_by_currency(filter_by_currency_empty):
     generator = filter_by_currency(transactions_empty)
     try:
         next(generator)
     except StopIteration:
-        assert "Нет транзакций в данной валюте" == "Нет транзакций в данной валюте"
+        assert "Нет транзакций в данной валюте" == filter_by_currency_empty
 
 
 def test_transaction_descriptions():
@@ -90,20 +83,20 @@ def test_transaction_descriptions():
         assert next(gen) == "Нет данных транзакции"
 
 
-def test_transaction_descriptions_empty():
-    gen = transaction_descriptions(transactions_empty)
+def test_transaction_descriptions_empty(transaction_descriptions_empty):
+    generator = transaction_descriptions(transactions_empty)
     try:
-        next(gen)
+        next(generator)
     except StopIteration:
-        assert "Нет данных транзакции" == "Нет данных транзакции"
+        assert "Нет данных транзакции" == transaction_descriptions_empty
 
 
-def test_transaction_descriptions_no_description():
-    gen = transaction_descriptions(transactions_no_description)
+def test_transaction_descriptions_no_descriptions(transaction_no_descriptions):
+    generator = transaction_descriptions(transactions_no_description)
     try:
-        next(gen)
+        next(generator)
     except StopIteration:
-        assert "Нет данных транзакции" == "Нет данных транзакции"
+        assert "Нет данных транзакции" == transaction_no_descriptions
 
 
 def test_card_number_generator():

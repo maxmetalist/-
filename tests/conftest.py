@@ -16,3 +16,18 @@ def date_revert_empty():
 @pytest.fixture
 def date_revert_notime():
     return "22.05.2022"
+
+
+@pytest.fixture
+def filter_by_currency_empty():
+    return "Нет транзакций в данной валюте"
+
+
+@pytest.fixture
+def transaction_descriptions_empty():
+    return "Нет данных транзакции"
+
+
+@pytest.fixture
+def transaction_no_descriptions():
+    return "Нет данных транзакции"

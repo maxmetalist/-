@@ -79,3 +79,21 @@ finally:
         assert "test_function ok. Res: 0.5" in log_content
 
     os.remove(temp_filename)
+
+
+@log(filename=temp_filename)
+def test_function():
+    """тест для проверки записи лога в файл"""
+    x = 1
+    y = 0
+    return x / y
+
+
+try:
+    test_function()
+finally:
+    with open(temp_filename, "r") as file:
+        log_content = file.read()
+        assert "test_function error: division by zero. Inputs: (), {}" in log_content
+
+    os.remove(temp_filename)

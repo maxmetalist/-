@@ -31,3 +31,18 @@ def transaction_descriptions_empty():
 @pytest.fixture
 def transaction_no_descriptions():
     return "Нет данных транзакции"
+
+
+@pytest.fixture
+def convert_amount_rub():
+    return "200.0"
+
+
+@pytest.fixture
+def convert_amount_no_curr():
+    return "Укажите валюту"
+
+
+@pytest.fixture
+def convert_amount_no_amount():
+    return "Укажите сумму для конвертации"

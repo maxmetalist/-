@@ -101,10 +101,10 @@ def filter_by_currency(transactions_list, currency="USD"):
 
 
 usd_transactions = filter_by_currency(transactions, "USD")
-try:
-    print(next(usd_transactions))
-except StopIteration:
-    print("Нет транзакций в данной валюте")
+# try:
+#     print(next(usd_transactions))
+# except StopIteration:
+#     print("Нет транзакций в данной валюте")
 
 
 def transaction_descriptions(transactions_list):
@@ -119,10 +119,10 @@ def transaction_descriptions(transactions_list):
 
 
 description = transaction_descriptions(transactions)
-try:
-    print(next(description))
-except StopIteration:
-    print("Нет данных транзакции")
+# try:
+#     print(next(description))
+# except StopIteration:
+#     print("Нет данных транзакции")
 
 
 def card_number_generator(start, stop):
@@ -137,7 +137,7 @@ def card_number_generator(start, stop):
 
 
 number = card_number_generator(1, 9999999999999999)
-try:
-    print(next(number))
-except StopIteration:
-    print("В этом диапазоне уже существуют номера карт. Укажите другой диапазон")
+# try:
+#     print(next(number))
+# except StopIteration:
+#     print("В этом диапазоне уже существуют номера карт. Укажите другой диапазон")

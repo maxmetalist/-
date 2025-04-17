@@ -22,7 +22,7 @@ def mask_account_card(card_type_number: str) -> str:
         return "Некорректный номер карты или счёта.Номер карты должен иметь 16 цифр, номер счёта должен иметь 20 цифр."
 
 
-print(mask_account_card("visa 1234567812345678"))
+# print(mask_account_card("visa 1234567812345678"))
 
 
 def get_date(date: str) -> str:
@@ -35,4 +35,4 @@ def get_date(date: str) -> str:
         return "укажите дату в формате гггг-мм-дд"
 
 
-print(get_date("2024-03-11T02:26:18.671407"))
+# print(get_date("2024-03-11T02:26:18.671407"))

@@ -34,11 +34,11 @@ def convert_amount(transact):
             print("Произошла ошибка. Проверьте корректность данных")
 
 
-if __name__ == "__main__":
-    transaction = {
-        "id": 441945886,
-        "state": "EXECUTED",
-        "date": "2019-08-26T10:50:58.294041",
-        "operationAmount": {"amount": 100.00, "currency": {"name": "USD", "code": "USD"}},
-    }
-    print(convert_amount(transaction))
+# if __name__ == "__main__":
+#     transaction = {
+#         "id": 441945886,
+#         "state": "EXECUTED",
+#         "date": "2019-08-26T10:50:58.294041",
+#         "operationAmount": {"amount": 100.00, "currency": {"name": "USD", "code": "USD"}},
+#     }
+#     print(convert_amount(transaction))
